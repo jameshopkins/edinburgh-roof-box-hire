@@ -2071,14 +2071,6 @@
 		position: relative;
 	}
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
 
 		.icon > .label {
 			display: none;
@@ -2337,6 +2329,10 @@
 
 		table td {
 			padding: 0.75em 0.75em;
+		}
+
+		table td.center {
+			text-align: center;
 		}
 
 		table th {
@@ -3223,6 +3219,14 @@
 
 		#footer ul li {
 			padding: 0 2em;
+		}
+
+		#footer .actions img {
+			width: 25px;
+		}
+
+		#footer .actions img path {
+			fill: red
 		}
 
 		#footer .copyright {

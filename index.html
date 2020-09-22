@@ -38,8 +38,8 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Products</a></li>
-					<li><a href="elements.html">FAQs</a></li>
+					<li><a href="packages.html">Packages</a></li>
+					<li><a href="faqs.html">FAQs</a></li>
 					<li><a href="elements.html">Contact</a></li>
 				</ul>
 				<ul class="actions vertical">
@@ -53,7 +53,7 @@
 					<h1>Roof box and bar hire across Edinburgh and the Lothians</h1>
 					<p>Our hassle-free, friendly service provides all you need to increase your vehicles storage capacity. <br/>We also deliver and fit everything for you.</p>
 					<ul class="actions">
-						<li><a href="#one" class="button scrolly">Enquire</a></li>
+						<li><a href="packages.html" class="button">View our packages</a></li>
 					</ul>
 				</div>
 			</section>
@@ -80,8 +80,8 @@
 							<p>All fitting is free and carried out by us. Simply provide us with your car, and you'll drive away with a fully-fitted roof box.</p>
 						</div>
 						<div>
-							<h3>Delivery available</h3>
-							<p>We can deliver the roof box to your home, and carry out the fitting there. No need to drive to us!</p>
+							<h3>Doorstep delivery</h3>
+							<p>We deliver the roof box to your home <strong>free-of-charge</strong>, and carry out the fitting there. No need to drive to us!</p>
 						</div>
 					</div>
 				</div>
@@ -89,18 +89,6 @@
 
 		<!-- Two -->
 			<section id="two" class="wrapper style1 special">
-				<div class="inner">
-					<h2>Feugiat lorem</h2>
-					<figure>
-					    <blockquote>
-					        "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra<br /> magna etiam lorem ultricies in diam. Sed arcu cras consequat."
-					    </blockquote>
-					    <footer>
-					        <cite class="author">Jane Anderson</cite>
-					        <cite class="company">CEO, Untitled</cite>
-					    </footer>
-					</figure>
-				</div>
 			</section>
 
 		<!-- Three -->
@@ -139,11 +127,12 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<h2>Get In Touch</h2>
+					<h2>Connect With Us</h2>
 					<ul class="actions">
-						<li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li>
-						<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
-						<li><span class="icon fa-map-marker"></span> 123 Somewhere Road, Nashville, TN 00000</li>
+						<li><a href="#"><img src="assets/images/icon-phone.svg"/> 07432256295</a></li>
+						<li><a href="mailto:hello@edinburghroofboxhire.co.uk"><img src="assets/images/icon-mail.svg"/> hello@edinburghroofboxhire.co.uk</a></li>
+						<li><a href="https://instagram.com/edinburghroofboxhire"><img src="assets/images/icon-instagram.svg"/> edinburghroofboxhire</a></li>
+						<li><a href="https://facebook.com/edinburghroofboxhire"><img src="assets/images/icon-facebook.svg"/> edinburghroofboxhire</a></li>
 					</ul>
 				</div>
 				<div class="copyright">
@@ -157,6 +146,35 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const quotes = [
+					{
+						title: "Brilliant service, exactly what I was looking for",
+						body: "The whole experience from start to finish was hassle-free. James promptly arrived at my home address and got to work carefully fitting the roof rails and roof box to my car. The additional space made my staycation much easier. Highly recommended",
+						client: "Brian",
+						hire: "Hired a medium roof box and bars for his Mercedes E-Class saloon"
+					},
+					{
+						title: "Thankful for the extra storage!",
+						body: "Really convenient service, which added volumes of space to the car for our trip to the Highlands! A pay-per-use platform like this is so much easier than buying all the kit yourself. James was also a pleasure to deal with!",
+						client: "Euan",
+						hire: "Hired a medium roof box and bars for his Mercedes A-Class"
+					}
+				]
 
+				const selectedQuote = quotes[Math.floor(Math.random() * quotes.length)];
+				const selectedQuoteMarkup = `
+				   	<div class="inner">
+						<h2>"${selectedQuote.title}"</h2>
+						<blockquote>"${selectedQuote.body}"</blockquote>
+						<footer>
+							<cite class="author">${selectedQuote.client}</cite>
+							<cite class="company">${selectedQuote.hire}</cite>
+						</footer>
+					</div>
+				`;
+
+				$('#two').append(selectedQuoteMarkup)
+			</script>
 	</body>
 </html>
