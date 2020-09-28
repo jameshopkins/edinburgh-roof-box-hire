@@ -1746,10 +1746,6 @@
 			font-weight: 400;
 		}
 
-		cite.company {
-			font-size: .8em;
-		}
-
 	figure {
 		margin: 0 0 2em 0;
 	}
@@ -2777,13 +2773,14 @@
 		}
 
 		#header {
-			height: 75px;
-			line-height: 75px;
+			height: 85px;
+			line-height: 85px;
 		}
 
 		#header .logo {
-			font-size: 1.25em;
+			font-size: 1.25em;#
 			text-align: center;
+			top: 15px;
 		}
 
 		#header .logo .mobile {
@@ -2804,9 +2801,13 @@
 			}
 
 			#header nav.right {
-				display: none;
+				font-size:0.85em;
+				margin-top:15px
 			}
 
+			#header nav.right img {
+				width:25px;
+			}
 	}
 
 	@media screen and (max-width: 480px) {
@@ -2829,7 +2830,7 @@
 		-ms-transition: -ms-transform 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #25a2c3;
+		background: #f6755e;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -2886,7 +2887,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #a7d9e7;
+			color: white;
 			cursor: pointer;
 			display: block;
 			height: 3.25em;
@@ -2993,7 +2994,7 @@
 		#banner h1 {
 			font-size: 3em;
 			color: white;
-			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.6);
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
@@ -3004,7 +3005,7 @@
 			margin-bottom: 1.75em;
 			font-weight: bold;
 			color: white;
-			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3075,6 +3076,7 @@
 
 	#one .inner {
 		margin-bottom: 2em;
+		font-size: 1.1em;
 	}
 
 	#one .flex-item {
@@ -3195,6 +3197,18 @@
 
 	}
 
+#two footer {
+	margin-bottom: 2em;
+}
+
+#two .button {
+	background: white;
+}
+
+#two blockquote {
+	font-size: 1.2em;
+}
+
 /* Footer */
 
 	#footer {
@@ -3223,6 +3237,8 @@
 
 		#footer .actions img {
 			width: 25px;
+			vertical-align: middle;
+			margin-right: 5px
 		}
 
 		#footer .actions img path {
