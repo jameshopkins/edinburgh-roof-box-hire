@@ -2537,17 +2537,6 @@
 			opacity: 0.25;
 		}
 
-		@media screen and (max-width: 480px) {
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				padding: 0;
-			}
-
-		}
 
 /* Flex */
 
@@ -2664,7 +2653,6 @@
 	#header nav.contact {
 		line-height: normal;
 		text-align: left;
-		margin-top: 35px;
 		font-weight: bold;
 		font-size: 1.2em;
 	}
@@ -2694,20 +2682,20 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-                line-height: 10em;
-                height: 10em;
 		z-index: 10001;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
-		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
 	}
+
 
 		#header .logo {
             font-family: League;
-            display: block;
-            width: 220px;
-            position: absolute;
-            left: 100px;
-            top: 10px;
+			width: 270px;
+		}
+
+		#header .logo img {
+			display: block;
 		}
 
 		#header .logo .mobile {
@@ -2715,18 +2703,21 @@
 		}
 
 		#header nav {
-			position: absolute;
-			top: 0;
 			height: inherit;
 			line-height: inherit;
 		}
 
 			#header nav.left {
-				left: 2em;
+				margin-left: 20px;
 			}
 
 			#header nav.right {
-				right: 2em;
+				margin-right: 20px;
+				margin-left: auto;
+			}
+
+			#header nav.right ul {
+				margin: 0;
 			}
 
 			#header nav .button {
@@ -2766,21 +2757,56 @@
 						margin: 0 0.5em 0 0;
 					}
 
+					#header .mobile {
+						display: none;
+					}
+
+					#header .logo .desktop {
+						margin: 10px 0;
+						margin-left: 20px;
+					}
+
 	@media screen and (max-width: 980px) {
 
+		#header nav.right {
+			margin-right: 0;
+		}
+
+		#header nav.mobile.contact {
+			width: 100%;
+			display: block;
+			line-height: normal;
+			background: #f6755e;
+			padding: 10px 20px;
+			font-size: 1em;
+		}
+
+		#header nav.mobile.contact a {
+			color: white;
+		}
+
+		#header nav.mobile.contact ul {
+			padding: 0;
+		}
+
+		#header nav.mobile.contact li {
+			line-height: 2em;
+			margin-bottom: 0;
+		}
+
 		body {
-			padding-top: 44px;
+			padding-top: 0;
 		}
 
 		#header {
-			height: 85px;
-			line-height: 85px;
 		}
 
 		#header .logo {
 			font-size: 1.25em;#
 			text-align: center;
-			top: 15px;
+			margin: 10px 0;
+			margin-left: 50px;
+			display: block;
 		}
 
 		#header .logo .mobile {
@@ -2801,12 +2827,11 @@
 			}
 
 			#header nav.right {
-				font-size:0.85em;
-				margin-top:15px
+				display:none
 			}
 
 			#header nav.right img {
-				width:25px;
+				width:20px;
 			}
 	}
 
@@ -2816,6 +2841,11 @@
 			min-width: 320px;
 		}
 
+	}
+	@media screen and (max-width: 550px) {
+		#header nav.mobile.contact {
+			font-size: 0.9em
+		}
 	}
 
 /* Menu */
@@ -3017,6 +3047,9 @@
 		}
 
 		@media screen and (max-width: 980px) {
+			.subpage section.wrapper,#banner {
+				margin-top:156px;
+			}
 
 			#banner {
 				padding: 8em 6em 6em 6em;
@@ -3042,6 +3075,10 @@
 
 		@media screen and (max-width: 480px) {
 
+			.subpage section.wrapper, #banner {
+				margin-top:141px
+			}
+
 			#banner {
 				padding: 4em 2em 2em 2em;
 			}
@@ -3059,7 +3096,7 @@
 			}
 
 			#header .logo .mobile {
-				width: 150px;
+				width: 200px;
 			}
 
 		}
