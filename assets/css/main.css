@@ -2691,7 +2691,6 @@
 
 		#header .logo {
             font-family: League;
-			width: 270px;
 		}
 
 		#header .logo img {
@@ -2764,6 +2763,7 @@
 					#header .logo .desktop {
 						margin: 10px 0;
 						margin-left: 20px;
+						width: 270px;
 					}
 
 	@media screen and (max-width: 980px) {
